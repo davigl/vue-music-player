@@ -9,7 +9,7 @@
   </a>
   
   <a href="https://github.com/Davigl/vue-music-player/stargazers">
-    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/Davigl/vue-music-player.svg>
+    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/Davigl/vue-music-player.svg">
   </a>
 
   <a href="https://github.com/Davigl/vue-music-player/issues">
