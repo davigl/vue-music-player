@@ -15,7 +15,6 @@
   <a href="https://github.com/Davigl/vue-music-player/issues">
     <img alt="Repository issues" src="https://img.shields.io/github/issues/Davigl/vue-music-player?style=flat-square&color=yellow">
   </a>
-  
 
   <img alt="Repository Size" src="https://img.shields.io/github/repo-size/Davigl/vue-music-player?style=flat-square&color=blueviolet">
 </p>
@@ -36,7 +35,7 @@ This project was developed with the following technologies:
 
 ## :thinking: How it looks?
 
-Visit this project by clicking [here]().
+Visit this project by clicking [here](https://basic-music-player.netlify.com/).
 
 <div align="center">
 
