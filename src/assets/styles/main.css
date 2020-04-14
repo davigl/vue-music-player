@@ -7,8 +7,6 @@
   box-sizing: border-box;
 }
 
-
-
 ::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -75,11 +73,6 @@ button {
 button:hover {
   opacity: 0.8;
   transform: scale(1.1);
-}
-
-.k-progress-outer {
-  margin-top: 15px;
-  padding-right: 0;
 }
 
 .song-details {
@@ -225,6 +218,11 @@ button:hover {
   width: 100%;
   justify-content: space-between;
   padding: 10px;
+}
+
+.k-progress-outer {
+  margin-top: 15px !important;
+  padding-right: 0 !important;
 }
 
 #app {
