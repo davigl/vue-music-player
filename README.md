@@ -28,7 +28,7 @@
 
 ## :thinking: About
 
-Basic Public Music Player, want to add your music? check [contributing](#user-content--add-your-music). Visit this project by clicking [here](https://basic-music-player.netlify.com/).
+This project is a basic public music player that you can add your musics and make it public, check [contributing](#user-content--add-your-music). Visit this project by clicking [here](https://basic-music-player.netlify.com/).
 
 <div align="center">
 
@@ -46,14 +46,13 @@ This project was developed with the following technologies:
 - [Eslint](https://github.com/eslint/eslint)
 - [Vue Fontawesome](https://github.com/FortAwesome/vue-fontawesome)
 
-
 ## 💁🏻 Add your Music
 
 Want to add some nice music to this public playlist? follow these steps:
 
 1. Fork it
 2. Create your feature branch: $ git checkout -b new-songs
-3. Edit [songs](https://github.com/Davigl/vue-music-player/blob/master/src/mocks/songs.js), make sure to add music and cover to the assets folder, sources must be from [soundcloud](https://soundcloud.com/) :]
+3. Edit [songs](https://github.com/Davigl/vue-music-player/blob/master/src/mocks/songs.js), make sure to add music and cover to the assets folder, sources must be from [soundcloud](https://soundcloud.com/) or content without copyright :]
 4. Commit your changes: $ git commit -am 'Add some feature'
 5. Push to the branch: $ git push origin new-songs
 6. Submit a pull request :D
