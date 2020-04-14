@@ -9,14 +9,13 @@
   </a>
   
   <a href="https://github.com/Davigl/vue-music-player/stargazers">
-    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/Davigl/vue-music-player?style=flat-square&color=9cf">
+    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/Davigl/vue-music-player.svg>
   </a>
 
   <a href="https://github.com/Davigl/vue-music-player/issues">
     <img alt="Repository issues" src="https://img.shields.io/github/issues/Davigl/vue-music-player?style=flat-square&color=yellow">
   </a>
   
-  <img alt="GitHub top Language" src="https://img.shields.io/github/languages/top/davigl/vue-music-player.svg?style=flat-square">
 
   <img alt="Repository Size" src="https://img.shields.io/github/repo-size/Davigl/vue-music-player?style=flat-square&color=blueviolet">
 </p>
