@@ -225,6 +225,12 @@ button:hover {
   padding-right: 0 !important;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
 #app {
   display: grid;
   gap: 1rem;

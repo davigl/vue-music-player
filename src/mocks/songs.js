@@ -1,5 +1,49 @@
 const songs = [
   {
+    title: "Gimme Chocolate",
+    artist: "Baby Metal",
+    percent: 0,
+    currentlyTimer: "00:00",
+    totalTimer: "04:03",
+    seconds: 243,
+    isPlaying: false,
+    cover: require("../assets/images/baby metal - gimme chocolate.jpg"),
+    src: require("../assets/audios/Baby Metal - Gimme Chocolate.mp3")
+  },
+  {
+    title: "Kream (Ft. Tyga) [Remix]",
+    artist: "Iggy Azalea",
+    percent: 0,
+    currentlyTimer: "00:00",
+    totalTimer: "02:30",
+    seconds: 150,
+    isPlaying: false,
+    cover: require("../assets/images/iggy azalea - kream.jpg"),
+    src: require("../assets/audios/Iggy Azalea - Kream (ft. Tyga).mp3")
+  },
+  {
+    title: "Started",
+    artist: "Iggy Azalea",
+    percent: 0,
+    currentlyTimer: "00:00",
+    totalTimer: "03:06",
+    seconds: 186,
+    isPlaying: false,
+    cover: require("../assets/images/iggy azalea - started.jpg"),
+    src: require("../assets/audios/Iggy Azalea - Started.mp3")
+  },
+  {
+    title: "Burn the Pages",
+    artist: "Sia",
+    percent: 0,
+    currentlyTimer: "00:00",
+    totalTimer: "03:55",
+    seconds: 235,
+    isPlaying: false,
+    cover: require("../assets/images/sia - burn the pages.jpg"),
+    src: require("../assets/audios/Sia - Burn The Pages.mp3")
+  },
+  {
     title: "Jumanji",
     artist: "Azealia Banks",
     percent: 0,

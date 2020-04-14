@@ -22,6 +22,7 @@
 <p align="center">
   <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#thinking-how-it-looks">How it Looks?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#add-your-music">Add your Music</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
 </p>
 
@@ -44,6 +45,16 @@ Visit this project by clicking [here](https://basic-music-player.netlify.com/).
 *Music Player*
 
 </div>
+
+## 💁🏻 Add your Music
+
+Want to add some nice music to this public playlist? follow these steps:
+
+1. Fork it
+2. Create your feature branch: git checkout -b new-songs, edit [songs](https://github.com/Davigl/vue-music-player/blob/master/src/mocks/songs.js), make sure to add music and cover to the assets folder :]
+3. Commit your changes: git commit -am 'Add some feature'
+4. Push to the branch: git push origin new-songs
+5. Submit a pull request :D
 
 ## :memo: License
 

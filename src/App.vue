@@ -35,6 +35,9 @@
             <font-awesome-icon icon="step-forward" />
           </button>
         </div>
+        <div class="footer">
+          <p>Powered by Soundcloud</p>
+        </div>
       </section>
     </main>
     <section class="playlist">
@@ -72,7 +75,7 @@
 import KProgress from "k-progress";
 
 import { formatTimer } from "./helpers/timer";
-import { deleteElement } from "./helpers/utils";
+import { deleteElement, shuffleArray } from "./helpers/utils";
 import songs from "./mocks/songs";
 
 export default {
@@ -84,7 +87,7 @@ export default {
       coverObject: { cover: true, animated: false },
       index: 0,
       isPlaying: false,
-      songs: songs,
+      songs: shuffleArray(songs),
       player: new Audio()
     };
   },
