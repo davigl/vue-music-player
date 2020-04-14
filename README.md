@@ -36,6 +36,8 @@ Basic Public Music Player, want to add your music? check [contributing](#user-co
 
 *Music Player*
 
+</div>
+
 ## :rocket: Technologies
 
 This project was developed with the following technologies:
@@ -44,7 +46,6 @@ This project was developed with the following technologies:
 - [Eslint](https://github.com/eslint/eslint)
 - [Vue Fontawesome](https://github.com/FortAwesome/vue-fontawesome)
 
-</div>
 
 ## 💁🏻 Add your Music
 
