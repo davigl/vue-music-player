@@ -179,7 +179,7 @@ button:hover {
 .playlist {
   background-color: #fff;
   overflow-y: auto;
-  max-height: 610px;
+  max-height: 622px;
   border-radius: 5px;
 }
 
