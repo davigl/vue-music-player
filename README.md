@@ -28,7 +28,7 @@
 
 ## :thinking: About
 
-This project is a basic public music player that you can add your musics and make it public, check [contributing](#user-content--add-your-music). Visit this project by clicking [here](https://basic-music-player.netlify.com/).
+This project is a basic public music player that you can add your musics and make it public, (keeps the music of all the contributors) check [contributing](#user-content--add-your-music). Visit this project by clicking [here](https://basic-music-player.netlify.com/).
 
 <div align="center">
 
