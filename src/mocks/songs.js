@@ -1,5 +1,40 @@
 const songs = [
   {
+    title: "MEnorme",
+    artist: "Linn da Quebrada",
+    seconds: 244,
+    cover: require("../assets/images/linn da quebrada - menorme.jpg"),
+    src: require("../assets/audios/Linn da Quebrada - MEnorme.mp3")
+  },
+  {
+    title: "Oceano",
+    artist: "Mc Tha",
+    seconds: 128,
+    cover: require("../assets/images/mc tha - oceano.jpg"),
+    src: require("../assets/audios/Mc Tha - Oceano.mp3")
+  },
+  {
+    title: "FU",
+    artist: "Miley Cyrus",
+    seconds: 229,
+    cover: require("../assets/images/miley cyrus - fu.jpg"),
+    src: require("../assets/audios/Miley Cyrus - FU.mp3")
+  },
+  {
+    title: "Counterflow",
+    artist: "Viktoria Modesta",
+    seconds: 204,
+    cover: require("../assets/images/viktoria modesta - counterflow.jpg"),
+    src: require("../assets/audios/Viktoria Modesta - Counterflow.mp3")
+  },
+  {
+    title: "Shakushain",
+    artist: "Wednesday Campanella",
+    seconds: 219,
+    cover: require("../assets/images/wednesday campanella - shakushain.jpg"),
+    src: require("../assets/audios/Wednesday Campanella - Shakushain.mp3")
+  },
+  {
     title: "Gimme Chocolate",
     artist: "Baby Metal",
     seconds: 243,

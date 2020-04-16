@@ -98,13 +98,14 @@ button:hover {
 
 .cover {
   height: 100%;
-  width: auto;
+  width: 270px;
   box-shadow: 0 24px 35px -16px rgba(107,179,237,.5);
   border-radius: 5px;
 }
 
 .cover-playlist > .cover {
   margin-right: 15px;
+  width: 50px;
 }
 
 .song-title {
