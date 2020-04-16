@@ -1,3 +1,8 @@
+/**
+ * Format seconds into a string minutes:seconds
+ * @param {integer} seconds
+ */
+
 const formatTimer = seconds => {
   let minutes = parseInt(seconds / 60).toString();
   seconds = parseInt(seconds % 60).toString();

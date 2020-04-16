@@ -17,8 +17,10 @@
             :color="['#df83f1', '#82279f', '#53cfe0']"
           />
           <div class="timer">
-            <p class="start">{{ current.currentlyTimer }}</p>
-            <p class="end">{{ current.totalTimer }}</p>
+            <p class="start">{{ currentlyTimer }}</p>
+            <p class="end">
+              {{ current.totalTimer }}
+            </p>
           </div>
         </div>
         <div class="controls">
@@ -75,7 +77,7 @@
 import KProgress from "k-progress";
 
 import { formatTimer } from "./helpers/timer";
-import { deleteElement, shuffleArray } from "./helpers/utils";
+import { deleteElement, threatSongs, shuffleArray } from "./helpers/utils";
 import songs from "./mocks/songs";
 
 export default {
@@ -87,6 +89,7 @@ export default {
       coverObject: { cover: true, animated: false },
       index: 0,
       isPlaying: false,
+      currentlyTimer: "00:00",
       songs: shuffleArray(songs),
       player: new Audio()
     };
@@ -96,7 +99,7 @@ export default {
       this.player.addEventListener("timeupdate", () => {
         var playerTimer = this.player.currentTime;
 
-        this.current.currentlyTimer = formatTimer(playerTimer);
+        this.currentlyTimer = formatTimer(playerTimer);
         this.current.percent = (playerTimer * 100) / this.current.seconds;
         this.current.isPlaying = true;
       });
@@ -116,13 +119,13 @@ export default {
     },
     setCurrentSong() {
       this.current = this.songs[this.index];
-      this.current.isPlaying = true;
       this.play(this.current);
       this.setCover();
     },
     play(song) {
       if (typeof song.src !== "undefined") {
         this.current.isPlaying = false;
+        this.index = this.songs.indexOf(this.current);
         this.current = song;
         this.player.src = this.current.src;
       }
@@ -139,6 +142,7 @@ export default {
     },
     next() {
       this.current.isPlaying = false;
+      this.index = this.songs.indexOf(this.current);
       this.index++;
       if (this.index > this.songs.length - 1) {
         this.index = 0;
@@ -147,6 +151,7 @@ export default {
     },
     prev() {
       this.current.isPlaying = false;
+      this.index = this.songs.indexOf(this.current);
       this.index--;
       if (this.index < 0) {
         this.index = this.songs.length - 1;
@@ -158,12 +163,14 @@ export default {
         if (this.index > 0) {
           this.index--;
         }
+        this.current.isPlaying = false;
         this.songs = deleteElement(this.songs, song);
         this.setCurrentSong();
       }
     }
   },
-  created() {
+  mounted() {
+    this.songs = threatSongs(this.songs);
     this.current = this.songs[this.index];
     this.player.src = this.current.src;
   }
