@@ -39,6 +39,13 @@
         </div>
         <div class="footer">
           <p>Powered by Soundcloud</p>
+          <a
+            href="https://github.com/Davigl/vue-music-player"
+            alt="Give a Star"
+            title="Give a Star"
+          >
+            <font-awesome-icon :icon="['fab', 'github']" />
+          </a>
         </div>
       </section>
     </main>

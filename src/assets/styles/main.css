@@ -232,6 +232,14 @@ button:hover {
   font-size: 10px;
 }
 
+.footer > a {
+  cursor: pointer;
+  color: #d4d4d4;
+  position: relative;
+  top: -10px;
+  font-size: 25px;
+}
+
 #app {
   display: grid;
   gap: 1rem;
