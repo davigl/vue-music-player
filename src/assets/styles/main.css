@@ -2,9 +2,11 @@
 @import './fonts.css';
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  user-select: none;
+  overflow-wrap: break-word;
+  margin: 0px;
+  padding: 0px;
 }
 
 ::-webkit-scrollbar-track
@@ -40,7 +42,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   font-family: Lato, sans-serif;
   background: rgb(223,131,241);
   background: linear-gradient(90deg, rgba(223,131,241,1) 0%, rgba(130,39,159,1) 35%, rgba(83,207,224,1) 100%);
@@ -55,6 +57,7 @@ main {
   flex-wrap: nowrap;
   width: 100%;
   max-width: 375px;
+  max-height: 623px;
   margin: 0 auto;
   padding: 25px;
   background-color: #fff;
@@ -244,6 +247,7 @@ button:hover {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
+  padding: 20px;
 }
 
 @media (max-width: 768px) {
