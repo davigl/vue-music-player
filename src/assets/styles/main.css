@@ -173,6 +173,7 @@ button:hover {
   height: 50px;
   display: flex;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
   background-color: rgba(0,0,0,.09);
   color: #fff;
