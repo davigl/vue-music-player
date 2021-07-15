@@ -51,10 +51,10 @@ This project was developed with the following technologies:
 Want to add some nice music to this public playlist? follow these steps:
 
 1. Fork it
-2. Create your feature branch: $ git checkout -b new-songs
+2. Create your feature branch: `$ git checkout -b new-songs`
 3. Edit [songs](https://github.com/Davigl/vue-music-player/blob/master/src/mocks/songs.js), make sure to add music and cover to the assets folder, sources must be from [soundcloud](https://soundcloud.com/) or content without copyright :]
-4. Commit your changes: $ git commit -am 'Add some feature'
-5. Push to the branch: $ git push origin new-songs
+4. Commit your changes: `$ git commit -am 'Add some feature'`
+5. Push to the branch: `$ git push origin new-songs`
 6. Submit a pull request :D
 
 ## :memo: License
