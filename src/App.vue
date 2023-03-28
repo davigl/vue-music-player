@@ -38,21 +38,22 @@
           </button>
         </div>
         <div class="footer">
-          <p>Powered by Soundcloud</p>
-          <a
-            href="https://github.com/Davigl/vue-music-player"
-            alt="Give a Star"
-            title="Give a Star"
-          >
-            <font-awesome-icon :icon="['fab', 'github']" />
-          </a>
+          <div>
+            <p>Played <span class="text-primary">{{ currentLoops }}</span> times</p>
+            <p>
+              <label>Loop for</label><input class="loops-input" v-model="loops" type="number" /><span>times</span>
+            </p>
+          </div>
+          <div>
+            <button class="btn-reset">Reset</button>
+          </div>
         </div>
       </section>
     </main>
     <section class="playlist">
       <h3>Now Playing <span> 🎵 </span></h3>
       <ul>
-        <li v-for="song in songs" :key="song.src" class="song">
+        <li v-for="song in songs" :key="song.id" class="song" :class="{active: song.id == current.id}">
           <div class="cover-playlist">
             <img class="cover" :src="song.cover" />
           </div>
@@ -69,11 +70,11 @@
               v-bind:percent="song.percent"
             />
           </div>
-          <div class="actions">
-            <button @click="removeSongFromPlaylist(song)" class="delete">
-              <font-awesome-icon icon="times" />
-            </button>
-          </div>
+<!--          <div class="actions">-->
+<!--            <button @click="removeSongFromPlaylist(song)" class="delete">-->
+<!--              <font-awesome-icon icon="times" />-->
+<!--            </button>-->
+<!--          </div>-->
         </li>
       </ul>
     </section>
@@ -84,7 +85,7 @@
 import KProgress from "k-progress";
 
 import { formatTimer } from "./helpers/timer";
-import { deleteElement, threatSongs, shuffleArray } from "./helpers/utils";
+import { deleteElement, threatSongs } from "./helpers/utils";
 import songs from "./mocks/songs";
 
 export default {
@@ -92,31 +93,18 @@ export default {
   name: "App",
   data() {
     return {
+      loops: 2,
+      currentLoops: 0,
       current: {},
       coverObject: { cover: true, animated: false },
       index: 0,
       isPlaying: false,
       currentlyTimer: "00:00",
-      songs: shuffleArray(songs),
+      songs: songs,
       player: new Audio()
     };
   },
   methods: {
-    listenersWhenPlay() {
-      this.player.addEventListener("timeupdate", () => {
-        var playerTimer = this.player.currentTime;
-
-        this.currentlyTimer = formatTimer(playerTimer);
-        this.current.percent = (playerTimer * 100) / this.current.seconds;
-        this.current.isPlaying = true;
-      });
-      this.player.addEventListener(
-        "ended",
-        function() {
-          this.next();
-        }.bind(this)
-      );
-    },
     setCover() {
       this.coverObject.animated = true;
 
@@ -141,7 +129,6 @@ export default {
       this.isPlaying = true;
 
       this.setCover();
-      this.listenersWhenPlay();
     },
     pause() {
       this.player.pause();
@@ -155,6 +142,7 @@ export default {
         this.index = 0;
       }
       this.setCurrentSong();
+      this.setLoopsCount(0)
     },
     prev() {
       this.current.isPlaying = false;
@@ -164,6 +152,7 @@ export default {
         this.index = this.songs.length - 1;
       }
       this.setCurrentSong();
+      this.setLoopsCount(0)
     },
     removeSongFromPlaylist(song) {
       if (this.songs.length > 1) {
@@ -174,12 +163,39 @@ export default {
         this.songs = deleteElement(this.songs, song);
         this.setCurrentSong();
       }
+    },
+    setLoopsCount($count){
+      this.currentLoops = $count
+    },
+    registerListener() {
+      this.player.addEventListener("timeupdate", () => {
+        var playerTimer = this.player.currentTime;
+
+        this.currentlyTimer = formatTimer(playerTimer);
+        let percent = (playerTimer * 100) / this.current.seconds;
+        this.current.percent = percent > 100 ? 100 : percent;
+        this.current.isPlaying = true;
+      });
+      this.player.addEventListener(
+        "ended",
+          () => {
+            this.setLoopsCount(++this.currentLoops)
+          ;
+          if (this.currentLoops >= this.loops) {
+            setTimeout(() => {
+              this.next();
+            }, 500);
+          }
+          this.play(this.current);
+        }
+      );
     }
   },
   mounted() {
     this.songs = threatSongs(this.songs);
     this.current = this.songs[this.index];
     this.player.src = this.current.src;
+    this.registerListener();
   }
 };
 </script>
